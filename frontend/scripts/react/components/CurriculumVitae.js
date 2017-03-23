@@ -138,6 +138,10 @@ const CurriculumVitae = ({
 }) => {
   return (
     <div className="curriculum-vitae">
+      <a className='btn btn-primary curriculum-vitae-button '
+        href='/resume' target='_blank' type='button'>
+        Download
+      </a>
       <div className="curriculum-vitae__avatar">
         <img
           className='curriculum-vitae__avatar__img'
