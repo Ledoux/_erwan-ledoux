@@ -1,0 +1,75 @@
+{
+	"backend": {
+		"domain": "herokuapp.com",
+		"helpersByName": {
+			"heroku": {
+			}
+		},
+		"serversByName": {
+			"express-webrouter": {
+				"abbreviation": "wbr",
+				"docker": {
+					"imagesByName": {
+						"current": {
+							"version": "0.1"
+						}
+					}
+				},
+				"isMain": true,
+				"runsByTypeName": {
+					"localhost": {
+						"host": "localhost",
+						"name": "localhost",
+						"port": "5000",
+						"tag": "localhost-erwan-ledoux-wbr",
+						"url": "http://localhost:5000"
+					},
+					"production": {
+						"abbreviation": "prod",
+						"hasDns": true,
+						"host": "erwan-ledoux.herokuapp.com",
+						"name": "production",
+						"pip": "pip",
+						"subDomain": "erwan-ledoux",
+						"tag": "erwan-ledoux-wbr",
+						"url": "https://erwan-ledoux.herokuapp.com",
+						"virtualName": "ERWAN_LEDOUX_WBR_SERVICE_HOST"
+					},
+					"staging": {
+						"abbreviation": "stg",
+						"hasDns": true,
+						"host": "staging-erwan-ledoux.herokuapp.com",
+						"name": "staging",
+						"pip": "pip",
+						"subDomain": "staging-erwan-ledoux",
+						"tag": "stg-erwan-ledoux-wbr",
+						"url": "https://staging-erwan-ledoux.herokuapp.com",
+						"virtualName": "STG_ERWAN_LEDOUX_WBR_SERVICE_HOST"
+					}
+				}
+			}
+		}
+	},
+	"frontend": {
+		"serverName": "express-webrouter"
+	},
+	"iconUrl": "https://raw.githubusercontent.com/snipsco/teleport/master/platforms/teleport-heroku/teleport-heroku.png",
+	"isPlatform": true,
+	"templateNames": [
+		"teleport-express-webrouter",
+		"teleport-webpack-react",
+		"teleport-heroku"
+	],
+	"typesByName": {
+		"localhost": {
+		},
+		"production": {
+			"abbreviation": "prod",
+			"hasDns": true
+		},
+		"staging": {
+			"abbreviation": "stg",
+			"hasDns": true
+		}
+	}
+}

@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+// needed for IE
+main {
+  display: block;
+}
+
+body {
+  // background: url('/images/snips-poly-background.png') #0c2366 top center no-repeat;
+  background-size: cover;
+  > * {
+    // prevent horisontal scrolling
+    // NOTE: setting this value directly on the body doesn't work in Chrome
+    overflow-x: hidden;
+  }
+}
+
+img {
+  max-width: 100%;
+  // needed for IE
+  width: auto;
+  height: auto;
+}
