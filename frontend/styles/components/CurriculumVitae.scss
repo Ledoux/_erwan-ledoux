@@ -42,13 +42,17 @@
       margin-left: 7.5%;
     }
     &-experience {
+      padding-right: 7.5rem;
+      padding-top: 0.5rem;
       @media (min-width: $md) {
         padding-right: 7.5rem;
         padding-top: 0.5rem;
       }
     }
     &-skills {
-      padding-right: 6rem;
+      @media (min-width: $lg) {
+        padding-right: 6rem;
+      }
     }
     text-align: left;
     &__title {
