@@ -1,3 +1,4 @@
+const path = require('path')
 const webpack = require('webpack')
 
 const config = require('./config')
@@ -7,23 +8,35 @@ module.exports = Object.assign({},
   config,
   {
     devtool: 'source-map',
-    entry: Object.assign({
-      index: [
-        'react-hot-loader/patch',
-        `webpack-dev-server/client?${serverConfig.url}`,
-        'webpack/hot/only-dev-server'
-      ].concat(config.entry.index)
-    }),
+    entry: Object.assign(
+      {
+        index: [
+          'react-hot-loader/patch',
+          `webpack-dev-server/client?${serverConfig.url}`,
+          'webpack/hot/only-dev-server'
+        ].concat(config.entry.index)
+      }
+    ),
     module: {
-      rules: config.module.rules.concat([{
+      rules: config.module.rules.concat([
+        {
           test: /\.s?css$/,
-          // exclude: /node_modules/,
+          exclude: /node_modules/,
           use: [
             'style-loader',
             'css-loader',
-            'sass-loader'
+            'sass-loader',
+            {
+               loader: "sass-vars-loader",
+               options: {
+                 files: [
+                   path.resolve(__dirname, '../frontend/scripts/utils/sass.js')
+                 ]
+               }
+            }
           ]
-        }, {
+        },
+        {
           test: /\.(eot|woff|woff2|ttf|otf|svg|png|jpg)$/,
           use: 'url-loader?limit=30000'
         }
@@ -37,13 +50,8 @@ module.exports = Object.assign({},
       }
     ),
     plugins: [
-      new webpack.HotModuleReplacementPlugin(),
-      /*
-      new webpack.ProvidePlugin({
-        'Promise': 'exports?global.Promise!es6-promise',
-        'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
-      })
-      */
+      new webpack.NamedModulesPlugin(),
+      new webpack.HotModuleReplacementPlugin()
     ]
   }
 )

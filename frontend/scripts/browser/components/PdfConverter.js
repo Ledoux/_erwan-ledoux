@@ -15,24 +15,10 @@ class PdfConverter extends Component {
   _handleConvertClick () {
     const url = `/pdf?rawHTML=${encodeURIComponent(this._containerElement.innerHTML)}`
     fetch(url)
-    /*
-    this.doc.fromHTML(this._pdfConverterDivElement,
-      15, 15,
-      {
-        'width': 180,
-        elementHandlers
-      }
-    )
-    */
-    //vdoc.output("dataurlnewwindow")
-    /*
-    GrabzIt("N2Q5ZjExMGZjZjFhNDkwMWE0M2Q4ODY3MDcyY2I1ZDI=")
-      .ConvertHTML(this._containerElement.innerHTML, {"format": "pdf"})
-      .Create()
-    */
   }
   render () {
-    return (<div className='pdf-converter'>
+    return (
+      <div className='pdf-converter'>
         <button
           className='pdf-converter__button'
           onClick={this.handleConvertClick}
@@ -44,7 +30,8 @@ class PdfConverter extends Component {
         >
           {this.props.children}
         </div>
-      </div>)
+      </div>
+    )
   }
 }
 
