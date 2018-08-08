@@ -8,6 +8,13 @@ const curriculumVitae = {
   twitterUsername: '@_erwanledoux',
   experiences: [
     {
+      title: 'Developer Full Stack',
+      date: '2018',
+      employer: 'Beta Gouv',
+      details: 'cabinet du ministère de la Culture',
+      link: 'https://passculture.beta.gouv.fr/'
+    },
+    {
       title: 'Web developer/tooler fullstack',
       date: '2015-2017',
       employer: 'Snips',
@@ -64,7 +71,10 @@ const curriculumVitae = {
         Snips emotional snapshot</a>,
       <a class=\'curriculum-vitae-link\' target='_blank'
         href='https://pariteaupouvoir.herokuapp.com/'>
-        Parité au pouvoir</a>`
+        Parité au pouvoir</a>
+      <a class=\'curriculum-vitae-link\' target='_blank'
+          href=\'https://passculture.beta.gouv.fr/\' />
+      Pass Culture</a>,`
     },
     {
       title: 'Open Source Projects',
@@ -108,22 +118,22 @@ Introduction to programming in C (L2, UPMC Paris VI, 2009)`
     title: 'Web Programming Full Stack',
     text: `node, npm, yarn, babel, webpack,
     gulp, react, react-native, angular, redux,
-    redux-apollo, lodash, d3, leaflet, Sass,
+    redux-apollo, lodash, d3, leaflet, sass,
     python, flask, socketio, wordpress, php`
   },
   {
     title: 'Infrastructure',
-    text: `git, docker, jenkins, heroku,
-    mongodb, rethinkdb`
+    text: `git, docker, jenkins, heroku, scalingo,
+    postgresql, mongodb, rethinkdb`
   },
   {
     title: 'Modeling in Neurosciences',
-    text: `C/C++, Brian, Matlab, scikit-learn,
+    text: `C/C++, brian, matlab, scikit-learn,
     jupiter notebook, latex`
   },
   {
     title: 'Computational Music',
-    text: 'MaxMSP, Ableton, Finale, Lilypond'
+    text: 'maxmsp, ableton, finale, lilypond'
   }]
 }
 
